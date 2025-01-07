@@ -1,13 +1,7 @@
 # Langkah Deploy 
 ## Install Dependency
 ```
-npm init -y
-```
-```
-npm install express mysql mysql2 dotenv multer ejs body-parser
-```
-```
-npm install pm2 -g
+bash setup.sh
 ```
 ## Config Environment
 1. Buat file .env pada folder aplikasi
