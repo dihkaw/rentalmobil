@@ -7,8 +7,10 @@ npm install express mysql mysql2 dotenv multer ejs body-parser
 ```
 ## .env
 ```java
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=rental_mobil
+DB_HOST=AlamatDatabaseAnda
+DB_USER=USerDatabaseAnda
+DB_PASSWORD=passwordDatabaseAnda
+DB_NAME=NamaDatabaseAnda
+PORT=3000
+
 ```
