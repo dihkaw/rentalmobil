@@ -2,7 +2,7 @@
 ## install
 ```
 npm init -y
-npm install express mysql dotenv multer ejs body-parser
+npm install express mysql mysql2 dotenv multer ejs body-parser
 
 ```
 ## .env
