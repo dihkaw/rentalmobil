@@ -12,5 +12,8 @@ DB_USER=USerDatabaseAnda
 DB_PASSWORD=passwordDatabaseAnda
 DB_NAME=NamaDatabaseAnda
 PORT=3000
-
+```
+## membuat data dummy
+```
+node dummy.js
 ```
