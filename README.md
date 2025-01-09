@@ -1,4 +1,4 @@
-# Langkah Deploy 
+# Langkah Deploy di Amazon Linux 2023
 ## Install Dependency
 ```
 bash setup.sh
@@ -12,6 +12,11 @@ DB_USER=USerDatabaseAnda
 DB_PASSWORD=passwordDatabaseAnda
 DB_NAME=NamaDatabaseAnda
 PORT=3000
+AWS_ACCESS_KEY_ID=AccessKeyIdAnda
+AWS_SECRET_ACCESS_KEY=SecretAccessKeyAnda
+AWS_SESSION_TOKEN=SessionTokenAnda
+AWS_REGION=RegionBucketAnda
+AWS_BUCKET_NAME=NamaBucketAnda
 ```
 ## Menambahkan data dummy ke database
 ```
