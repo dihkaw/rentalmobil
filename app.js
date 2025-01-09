@@ -9,6 +9,64 @@ const os = require('os');
 
 const app = express();
 
+const mysqldump = require('mysqldump');
+const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
+const fs = require('fs');
+
+// Konfigurasi S3 Client
+const s3 = new S3Client({
+    region: process.env.AWS_REGION,
+    credentials: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+	sessionToken: process.env.AWS_SESSION_TOKEN, // Menambahkan session token 
+    },
+});
+
+// Route untuk backup database
+app.get('/backup', async (req, res) => {
+    try {
+        // Path file backup
+        const backupFilePath = path.join(__dirname, 'backup.sql');
+
+        // Membuat file backup database
+        await mysqldump({
+            connection: {
+                host: process.env.DB_HOST,
+                user: process.env.DB_USER,
+                password: process.env.DB_PASSWORD,
+                database: process.env.DB_NAME,
+            },
+            dumpToFile: backupFilePath,
+        });
+
+        console.log('Backup database berhasil dibuat.');
+
+        // Membaca file backup
+        const fileContent = fs.readFileSync(backupFilePath);
+
+        // Mengunggah file ke S3
+        const params = {
+            Bucket: process.env.AWS_BUCKET_NAME,
+            Key: `backup-${Date.now()}.sql`, // Nama file di S3
+            Body: fileContent,
+        };
+
+        const command = new PutObjectCommand(params);
+        const data = await s3.send(command);
+        
+	console.log('Backup berhasil diunggah ke S3:', data);
+
+        // Menghapus file backup lokal
+        fs.unlinkSync(backupFilePath);
+
+        res.send(`Backup berhasil diunggah ke S3.`);
+    } catch (error) {
+        console.error('Gagal membackup database:', error.message);
+        res.status(500).send('Gagal membackup database.');
+    }
+});
+
 
 // Fungsi untuk mendapatkan IP lokal
 function getLocalIP() {
