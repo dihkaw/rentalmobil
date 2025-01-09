@@ -4,7 +4,7 @@
 bash setup.sh
 ```
 ## Config Environment
-1. Buat file .env pada folder aplikasi
+1. Buat file **.env** pada folder aplikasi
 2. Tambahkan kebutuhan untuk mengkoneksikan database seperti hostname, user, password, dan nama database seperti berikut :
 ```java
 # Konfigurasi Database Server
