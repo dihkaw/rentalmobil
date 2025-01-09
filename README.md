@@ -5,7 +5,7 @@ bash setup.sh
 ```
 ## Konfigurasi *environment*
 1. Buat file **.env** pada folder aplikasi
-2. Tambahkan kebutuhan untuk mengkoneksikan database seperti hostname, user, password, dan nama database seperti berikut :
+2. Tambahkan kebutuhan untuk mengkoneksikan database seperti hostname, user, password, nama database dan AWS credentials seperti berikut :
 ```java
 # Konfigurasi Database Server
 DB_HOST=localhost         # Alamat host database (contoh: localhost atau IP server atau DNS)
