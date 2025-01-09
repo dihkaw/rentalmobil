@@ -8,16 +8,16 @@ bash setup.sh
 2. Tambahkan kebutuhan untuk mengkoneksikan database seperti hostname, user, password, dan nama database seperti berikut :
 ```java
 # Konfigurasi Database Server
-DB_HOST=localhost       # Alamat host database (contoh: localhost atau IP server atau DNS)
-DB_USER=root            # Nama pengguna database (contoh: root atau admin)
+DB_HOST=localhost        # Alamat host database (contoh: localhost atau IP server atau DNS)
+DB_USER=root             # Nama pengguna database (contoh: root atau admin)
 DB_PASSWORD=yourpassword # Kata sandi database
-DB_NAME=rental_cars     # Nama database yang digunakan
+DB_NAME=rental_cars      # Nama database yang digunakan
 
 # Konfigurasi server
-PORT=3000                             # Port tempat aplikasi berjalan
+PORT=3000                # Port tempat aplikasi berjalan
 
 # AWS Credentials
-AWS_ACCESS_KEY_ID=your-access-key-id   # Access Key ID AWS
+AWS_ACCESS_KEY_ID=your-access-key-id  # Access Key ID AWS
 AWS_SECRET_ACCESS_KEY=your-secret-key # Secret Access Key AWS
 AWS_SESSION_TOKEN=your-session-token  # Token sesi AWS (jika menggunakan kredensial sementara)
 AWS_REGION=your-region                # Wilayah AWS (contoh: us-east-1, us-west-2)
