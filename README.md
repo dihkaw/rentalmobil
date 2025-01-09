@@ -7,7 +7,7 @@ bash setup.sh
 1. Buat file .env pada folder aplikasi
 2. Tambahkan kebutuhan untuk mengkoneksikan database seperti hostname, user, password, dan nama database seperti berikut :
 ```java
-DB_HOST=AlamatDatabaseAnda
+DB_HOST=AlamatDatabaseAnda #
 DB_USER=USerDatabaseAnda
 DB_PASSWORD=passwordDatabaseAnda
 DB_NAME=NamaDatabaseAnda
