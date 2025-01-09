@@ -7,16 +7,21 @@ bash setup.sh
 1. Buat file .env pada folder aplikasi
 2. Tambahkan kebutuhan untuk mengkoneksikan database seperti hostname, user, password, dan nama database seperti berikut :
 ```java
-DB_HOST=AlamatDatabaseAnda #
-DB_USER=USerDatabaseAnda
-DB_PASSWORD=passwordDatabaseAnda
-DB_NAME=NamaDatabaseAnda
-PORT=3000
-AWS_ACCESS_KEY_ID=AccessKeyIdAnda
-AWS_SECRET_ACCESS_KEY=SecretAccessKeyAnda
-AWS_SESSION_TOKEN=SessionTokenAnda
-AWS_REGION=RegionBucketAnda
-AWS_BUCKET_NAME=NamaBucketAnda
+# Konfigurasi Database Server
+DB_HOST=localhost       # Alamat host database (contoh: localhost atau IP server atau DNS)
+DB_USER=root            # Nama pengguna database (contoh: root atau admin)
+DB_PASSWORD=yourpassword # Kata sandi database
+DB_NAME=rental_cars     # Nama database yang digunakan
+
+# Konfigurasi server
+PORT=3000                             # Port tempat aplikasi berjalan
+
+# AWS Credentials
+AWS_ACCESS_KEY_ID=your-access-key-id   # Access Key ID AWS
+AWS_SECRET_ACCESS_KEY=your-secret-key # Secret Access Key AWS
+AWS_SESSION_TOKEN=your-session-token  # Token sesi AWS (jika menggunakan kredensial sementara)
+AWS_REGION=your-region                # Wilayah AWS (contoh: us-east-1, us-west-2)
+AWS_BUCKET_NAME=your-bucket-name      # Nama bucket S3 tempat penyimpanan backup
 ```
 ## Menambahkan data dummy ke database
 ```
