@@ -23,7 +23,7 @@ AWS_SESSION_TOKEN=your-session-token   # Token sesi AWS (jika menggunakan kreden
 AWS_REGION=your-region                 # Wilayah AWS (contoh: us-east-1, us-west-2)
 AWS_BUCKET_NAME=your-bucket-name       # Nama bucket S3 tempat penyimpanan backup
 ```
-## Menambahkan data dummy ke database
+## Menambahkan data *dummy* ke *database*
 ```
 node dummy.js
 ```
@@ -31,5 +31,5 @@ node dummy.js
 ```
 pm2 start app.js
 ```
-## Test Program
-Buka browser dan masukan IP Address Anda dan portnya seperti berikut: http://localhost:3000
+## Ujicoba aplikasi
+Buka browser dan masukan IP Address Anda dan portnya seperti berikut: **http://localhost:3000**
