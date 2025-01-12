@@ -3,6 +3,11 @@
 ```
 bash setup.sh
 ```
+atau bisa dengan 
+```
+npm install --prefix
+npm isntall -g pm2
+```
 ## Konfigurasi *environment*
 1. Buat file **.env** pada folder aplikasi
 2. Tambahkan kebutuhan untuk mengkoneksikan database seperti hostname, user, password, nama database dan AWS credentials seperti berikut :
