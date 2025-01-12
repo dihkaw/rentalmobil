@@ -31,9 +31,9 @@ require('dotenv').config();
         } else {
             // Tambahkan data dummy jika tabel kosong
             const dummyData = [
-                { name: 'Avanza', price: 500000, image: 'public/uploads/avanza.jpg' },
-                { name: 'Xenia', price: 400000, image: 'public/uploads/xenia.jpg' },
-                { name: 'Ertiga', price: 650000, image: 'public/uploads/ertiga.jpg' },
+                { name: 'Avanza', price: 500000, image: '/uploads/avanza.jpg' },
+                { name: 'Xenia', price: 400000, image: '/uploads/xenia.jpg' },
+                { name: 'Ertiga', price: 650000, image: '/uploads/ertiga.jpg' },
             ];
 
             const insertQuery = `
