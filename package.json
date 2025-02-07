@@ -18,7 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dummy.js",
     "start-prod": "pm2 start app.js",
-    "stop-prod": "pm2 stop app.js"
+    "stop-prod": "pm2 stop app"
   },
   "repository": {
     "type": "git",
